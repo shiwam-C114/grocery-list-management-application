@@ -1,4 +1,5 @@
-this is a grocery list management app.
+this is a grocery list management app. <br>
 tech stack 
-- React
+- React. <br>
+
 solo project
