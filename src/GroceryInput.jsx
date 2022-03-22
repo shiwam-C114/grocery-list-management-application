@@ -4,16 +4,13 @@ import GroceryList from "./GroceryList";
 
 function GroceryInput() {
     const [item, setItem] = useState("")
-
-    function handleClick() {
-        console.log("handlecalled");
-        <GroceryList name={item} / >
-    }
+    const [data, setData] = useState([])
 
     return(
     <>
         <input id="grocery" type="text" defaultValue={item} onChange={(e)=>{setItem(e.target.value)}} />
-        <button  onClick={handleClick} >add item</button>
+        <button  onClick={()=>{setData([...data, item]); console.log(data, "data");}} >add item</button>
+        <GroceryList data ={data} />
     </>
 )
 }
