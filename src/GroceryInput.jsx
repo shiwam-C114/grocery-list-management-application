@@ -10,7 +10,7 @@ function GroceryInput() {
     <>
         <input id="grocery" type="text" defaultValue={item} onChange={(e)=>{setItem(e.target.value)}} />
         <button  onClick={()=>{setData([...data, item]); console.log(data, "data");}} >add item</button>
-        <GroceryList data ={data} />
+        <GroceryList data ={data}  updataData = {setData} />
     </>
 )
 }
